@@ -1,0 +1,20 @@
+<%- include('partials/head') -%>
+
+<div class="head">
+    <h1>Dashboard Page</h1>
+</div>
+<nav>
+    <form action="logout" method="post">
+        <button>Logout</button>
+    </form>
+</nav>
+
+    <div class="alert">
+        <%  if(message.length >0){ %>
+            <div><h2 class="success">Welcome <%= message %></h2></div>
+       <% }%>
+       <p>You have successfully Login to your Dashboard</p>
+    </div>
+
+    
+<%- include('partials/footer') -%>
