@@ -1,10 +1,7 @@
 const express = require('express');
-const Sequelize = require('sequelize');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const ejs =require('ejs');
 const MySQLStore = require('express-mysql-session')(session);
-const mysql = require('mysql2');
 const flash =  require('connect-flash');
 const db = require('./models/index');
 const route= require('./routes/route');
@@ -25,7 +22,7 @@ const options = {
 };
 var sessionStore = new MySQLStore(options);
 
-  db.sequelize.sync({force:false})
+  db.sequelize.sync({force:true})
 
    app.set('view engine', 'ejs');
 
