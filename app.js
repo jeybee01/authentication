@@ -22,7 +22,7 @@ const options = {
 };
 var sessionStore = new MySQLStore(options);
 
-  db.sequelize.sync({force:true})
+  db.sequelize.sync({force:false})
 
    app.set('view engine', 'ejs');
 
